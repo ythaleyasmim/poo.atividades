@@ -24,7 +24,8 @@ class Ponto:
         d = math.sqrt(self.x**2 + self.y**2)
         return d
 
-    
+    def iguais(self, outro):
+        return self.x == outro.x and self.y == outro.y
 
 
 print('criando pontos')
@@ -43,6 +44,14 @@ p.move(10, 20)
 p.exibir()
 
 
-
 print('distancia origem')
 print(p.distancia_origem())
+
+p1 = Ponto(2, 3)
+p2 = Ponto(2, 3)
+p3 = Ponto(5, 4)
+
+print(p1.iguais(p2))  # True
+print(p1.iguais(p3))  # False
+
+print(p1.distancia_origem()) 
